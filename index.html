@@ -163,6 +163,25 @@ section{max-width:1200px;margin:0 auto;padding:80px 60px}
 .tl-event{font-size:15px;font-weight:500;color:var(--white);margin-bottom:3px}
 .tl-detail{font-size:13px;color:var(--muted)}
 
+/* ARTICLES */
+.articles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.article-card{
+  background:var(--navy2);border:1px solid var(--border);border-radius:12px;
+  padding:28px;text-decoration:none;display:block;
+  transition:transform .3s,border-color .3s;
+}
+.article-card:hover{transform:translateY(-4px);border-color:rgba(200,146,42,.5)}
+.art-cat{font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
+.art-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.4;margin-bottom:10px}
+.art-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px}
+.art-meta{font-size:12px;color:var(--muted);display:flex;gap:12px;align-items:center}
+.art-read{font-size:12px;color:var(--gold);margin-top:16px;display:flex;align-items:center;gap:4px}
+.art-new{
+  font-size:10px;letter-spacing:1px;
+  background:rgba(200,146,42,.15);color:var(--gold2);
+  padding:2px 8px;border-radius:20px;border:1px solid rgba(200,146,42,.3);
+}
+
 /* FOOTER */
 footer{
   background:var(--navy2);border-top:1px solid var(--border);
@@ -476,6 +495,43 @@ footer{
     </div>
   </div>
 </section>
+
+<section id="articles">
+  <div class="section-header">
+    <span class="section-num">07</span>
+    <h2 class="section-title">บทความความคิด</h2>
+    <div class="section-line"></div>
+  </div>
+  <p style="font-size:15px;color:var(--text);max-width:680px;margin-bottom:36px;line-height:1.9">
+    ความคิด วิสัยทัศน์ และมุมมองต่อสังคม เศรษฐกิจ และอนาคตของประเทศไทย
+    โดย <strong style="color:var(--white)">ปรีชา ศรีประดู่</strong>
+  </p>
+  <div class="articles-grid">
+
+    <a href="article-1-future-thailand.html" class="article-card">
+      <div class="art-cat">บทความความคิด <span class="art-new">ใหม่</span></div>
+      <div class="art-title">อนาคตประเทศไทย…จะไปทางไหน อยู่ที่เราวันนี้</div>
+      <div class="art-desc">ประเทศไทยกำลังยืนอยู่บนทางแยกสำคัญ ไม่ใช่แค่เรื่องเศรษฐกิจ ไม่ใช่แค่เรื่องการเมือง แต่คืออนาคตของลูกหลานไทยทั้งประเทศ</div>
+      <div class="art-meta">
+        <span>17 พฤษภาคม 2568</span>
+        <span>·</span>
+        <span>อ่าน 5 นาที</span>
+      </div>
+      <div class="art-read">อ่านบทความ →</div>
+    </a>
+
+    <div class="article-card" style="border-style:dashed;opacity:0.5;cursor:default">
+      <div class="art-cat">บทความความคิด</div>
+      <div class="art-title" style="color:var(--muted)">บทความถัดไป — เร็วๆ นี้</div>
+      <div class="art-desc">บทความเกี่ยวกับนโยบายเศรษฐกิจ SME และการพัฒนานครพนม</div>
+      <div class="art-meta">
+        <span>กำลังเขียน...</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <footer>
   <div class="footer-name">ปรีชา ศรีประดู่</div>

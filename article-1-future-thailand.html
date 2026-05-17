@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>อนาคตประเทศไทย…จะไปทางไหน อยู่ที่เราวันนี้ | ปรีชา ศรีประดู่</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0d1b35;
+  --navy2: #132244;
+  --gold: #c8922a;
+  --gold2: #e8b84b;
+  --white: #f4f6fa;
+  --text: #c8d4e8;
+  --muted: #6a7d99;
+  --border: rgba(200,146,42,0.2);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--text);font-family:'Sarabun',sans-serif;font-weight:300;line-height:1.9;overflow-x:hidden}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;height:60px;
+  background:rgba(13,27,53,0.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{font-size:15px;font-weight:500;color:var(--white);text-decoration:none}
+.nav-logo span{color:var(--gold)}
+.nav-back{font-size:13px;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:6px}
+.nav-back:hover{color:var(--gold)}
+
+.hero{
+  padding:120px 0 60px;
+  max-width:780px;margin:0 auto;padding-left:24px;padding-right:24px;
+}
+.article-cat{
+  font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;
+  margin-bottom:16px;display:flex;align-items:center;gap:8px;
+}
+.article-cat::before{content:'';width:32px;height:1px;background:var(--gold)}
+.article-title{
+  font-size:clamp(28px,4vw,42px);font-weight:600;color:var(--white);
+  line-height:1.3;margin-bottom:20px;
+}
+.article-meta{
+  display:flex;align-items:center;gap:16px;
+  font-size:13px;color:var(--muted);
+  padding:16px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  margin-bottom:48px;
+}
+.meta-author{display:flex;align-items:center;gap:8px}
+.meta-dot{color:var(--border)}
+
+.article-body{max-width:780px;margin:0 auto;padding:0 24px 80px}
+
+.article-body p{
+  font-size:17px;color:var(--text);line-height:2;
+  margin-bottom:24px;
+}
+.article-body p strong{color:var(--white);font-weight:500}
+
+.pull-quote{
+  border-left:3px solid var(--gold);
+  padding:20px 28px;
+  margin:36px 0;
+  background:rgba(200,146,42,0.07);
+  border-radius:0 10px 10px 0;
+}
+.pull-quote p{
+  font-size:19px;font-style:italic;color:var(--gold2);
+  line-height:1.8;margin:0;
+}
+
+.section-break{
+  text-align:center;margin:36px 0;
+  font-size:20px;color:var(--border);letter-spacing:8px;
+}
+
+.country-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:16px;
+  margin:32px 0;
+}
+.country-card{
+  background:var(--navy2);border:1px solid var(--border);
+  border-radius:10px;padding:20px;
+}
+.country-flag{font-size:24px;margin-bottom:8px}
+.country-name{font-size:14px;font-weight:600;color:var(--white);margin-bottom:6px}
+.country-desc{font-size:13px;color:var(--muted);line-height:1.7}
+
+.key-values{
+  background:var(--navy2);border:1px solid var(--border);
+  border-radius:12px;padding:28px 32px;margin:32px 0;
+}
+.key-values-title{font-size:13px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:16px}
+.value-list{list-style:none}
+.value-list li{
+  font-size:15px;color:var(--text);padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  display:flex;align-items:center;gap:12px;
+}
+.value-list li:last-child{border-bottom:none}
+.value-list li::before{content:'✦';color:var(--gold);font-size:10px;flex-shrink:0}
+
+.closing-quote{
+  text-align:center;
+  background:linear-gradient(135deg,var(--navy2),rgba(26,74,138,0.3));
+  border:1px solid rgba(200,146,42,0.35);
+  border-radius:16px;padding:40px;margin:40px 0;
+}
+.closing-quote p{
+  font-size:18px;color:var(--white);font-weight:500;line-height:1.9;margin:0;
+}
+.closing-quote .flag{font-size:24px;margin-bottom:12px}
+
+.article-footer{
+  border-top:1px solid var(--border);
+  padding-top:32px;margin-top:48px;
+  display:flex;align-items:center;gap:16px;
+}
+.author-info h4{font-size:15px;font-weight:500;color:var(--white)}
+.author-info p{font-size:13px;color:var(--muted)}
+
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.tag{
+  font-size:11px;letter-spacing:1px;
+  padding:4px 12px;border-radius:20px;
+  border:1px solid var(--border);color:var(--muted);
+}
+
+.back-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;color:var(--gold);text-decoration:none;
+  margin-top:32px;
+}
+.back-btn:hover{color:var(--gold2)}
+
+@media(max-width:600px){
+  nav{padding:0 16px}
+  .hero{padding:100px 16px 40px}
+  .article-body{padding:0 16px 60px}
+  .country-grid{grid-template-columns:1fr}
+  .closing-quote{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">PRICHA <span>SRIPRADU</span></a>
+  <a href="index.html#vision" class="nav-back">← กลับหน้าหลัก</a>
+</nav>
+
+<div class="hero">
+  <div class="article-cat">บทความความคิด</div>
+  <h1 class="article-title">อนาคตประเทศไทย…<br>จะไปทางไหน อยู่ที่เราวันนี้</h1>
+  <div class="article-meta">
+    <div class="meta-author">
+      <span>✍️</span>
+      <span>ปรีชา ศรีประดู่</span>
+    </div>
+    <span class="meta-dot">·</span>
+    <span>17 พฤษภาคม 2568</span>
+    <span class="meta-dot">·</span>
+    <span>อ่าน 5 นาที</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>
+    ประเทศไทยในวันนี้ กำลังยืนอยู่บนทางแยกสำคัญ<br>
+    ไม่ใช่แค่เรื่องเศรษฐกิจ ไม่ใช่แค่เรื่องการเมือง<br>
+    แต่คือ <strong>"อนาคตของลูกหลานไทยทั้งประเทศ"</strong>
+  </p>
+
+  <p>
+    หลายปีที่ผ่านมา คนไทยเริ่มแบ่งแยกกันมากขึ้น
+    แบ่งสี แบ่งฝ่าย แบ่งอุดมการณ์
+    จนบางครั้งเราลืมไปว่า แม้เราจะคิดต่างกัน
+    แต่เราก็ยังอยู่ใต้ธงชาติเดียวกัน
+  </p>
+
+  <div class="pull-quote">
+    <p>"ประเทศที่พัฒนาแล้วในโลก ไม่ได้หมายความว่าเขาไม่มีความเห็นต่าง แต่สิ่งที่ทำให้เขาแข็งแรง คือเมื่อถึงเรื่องชาติ ทุกคนยังมองไปในทิศทางเดียวกัน"</p>
+  </div>
+
+  <div class="section-break">· · ·</div>
+
+  <p>เราลองมองประเทศรอบตัวเรา</p>
+
+  <div class="country-grid">
+    <div class="country-card">
+      <div class="country-flag">🇻🇳</div>
+      <div class="country-name">เวียดนาม</div>
+      <div class="country-desc">ผ่านสงครามมาหนักกว่าไทยหลายเท่า แต่วันนี้เติบโตอย่างรวดเร็ว เพราะปลูกฝังความรักชาติและร่วมมือกันสร้างอนาคต</div>
+    </div>
+    <div class="country-card">
+      <div class="country-flag">🇸🇬</div>
+      <div class="country-name">สิงคโปร์</div>
+      <div class="country-desc">ประเทศเล็ก ไม่มีทรัพยากร แต่ให้ความสำคัญกับ "คุณภาพคน" มากที่สุด ควบคุมการใช้มือถือในโรงเรียนอย่างจริงจัง</div>
+    </div>
+    <div class="country-card">
+      <div class="country-flag">🇯🇵</div>
+      <div class="country-name">ญี่ปุ่น</div>
+      <div class="country-desc">ให้ความสำคัญกับวินัย ความรับผิดชอบ และการเคารพสถาบันของประเทศ สร้างคนให้เข้มแข็งจากรุ่นสู่รุ่น</div>
+    </div>
+    <div class="country-card">
+      <div class="country-flag">🇨🇳</div>
+      <div class="country-name">จีน</div>
+      <div class="country-desc">รวมพลังเป็นหนึ่ง ไม่แบ่งแยก พัฒนาประเทศอย่างยิ่งใหญ่ด้วยความสามัคคีของคนทั้งชาติ</div>
+    </div>
+  </div>
+
+  <div class="section-break">· · ·</div>
+
+  <p>
+    ในขณะที่หลายครอบครัวในประเทศไทย
+    ต้องยอมให้ลูกเล่นมือถือเพราะพ่อแม่ต้องทำงานหนัก
+    มือถือจึงกลายเป็น <strong>"พี่เลี้ยงเด็ก"</strong> โดยไม่ตั้งใจ
+  </p>
+
+  <p>
+    เด็กไทยจำนวนมากโตมากับคลิปสั้น ความรวดเร็ว ความใจร้อน
+    การด่าทอกันบนโลกออนไลน์ และแนวคิดที่เน้น "สิทธิ" มากกว่า "หน้าที่"
+  </p>
+
+  <p>
+    <strong>เด็กไม่ผิด พ่อแม่ก็ไม่ผิด</strong><br>
+    แต่ถ้าสังคมไม่ช่วยกันสร้างทิศทางที่ถูกต้อง
+    อนาคตของชาติอาจค่อย ๆ อ่อนแอลงโดยที่เราไม่รู้ตัว
+  </p>
+
+  <div class="key-values">
+    <div class="key-values-title">สิ่งที่ประเทศเจริญให้ความสำคัญ</div>
+    <ul class="value-list">
+      <li>วินัยและความรับผิดชอบ</li>
+      <li>ความรักชาติและการเคารพสถาบัน</li>
+      <li>การสร้างคนให้เข้มแข็ง</li>
+      <li>คิดถึงส่วนรวมมากกว่าส่วนตัว</li>
+      <li>ร่วมมือกันสร้าง ไม่แบ่งแยกทำลาย</li>
+    </ul>
+  </div>
+
+  <p>
+    ผมเชื่อว่า <strong>คนไทยทุกฝ่ายล้วนรักประเทศ</strong>
+    แม้อาจมีมุมมองทางการเมืองแตกต่างกัน
+    แต่เราต้องไม่ปล่อยให้ความเกลียดชัง
+    มาทำลายอนาคตของลูกหลาน
+  </p>
+
+  <p>
+    การรักชาติ ไม่ได้หมายความว่าต้องเกลียดคนเห็นต่าง
+    แต่คือการช่วยกันรักษาบ้านหลังนี้
+    ให้มั่นคง แข็งแรง และน่าอยู่สำหรับคนรุ่นต่อไป
+  </p>
+
+  <div class="pull-quote">
+    <p>"ทรัพยากรที่สำคัญที่สุดของชาติ ไม่ใช่น้ำมัน ไม่ใช่ทองคำ แต่คือคุณภาพของคน"</p>
+  </div>
+
+  <p>
+    ประเทศไทยยังมีโอกาสเสมอ
+    เรามีคนเก่ง มีวัฒนธรรมที่งดงาม
+    มีสถาบันหลักของชาติที่เป็นศูนย์รวมจิตใจ
+    มีครอบครัวที่อบอุ่น และมีประชาชนที่มีน้ำใจ
+  </p>
+
+  <p>
+    สิ่งที่เราต้องการในวันนี้ อาจไม่ใช่การเกลียดกันมากขึ้น
+    แต่คือการกลับมาถามตัวเองว่า
+  </p>
+
+  <div class="closing-quote">
+    <div class="flag">🇹🇭</div>
+    <p>
+      "ถ้าเราอยากเห็นประเทศไทยเข้มแข็ง<br>
+      เราต้องเริ่มจากการสร้างคนไทยที่รักชาติ มีวินัย และคิดถึงส่วนรวม<br>
+      เพื่อลูกหลานของเราในวันข้างหน้า"
+    </p>
+  </div>
+
+  <p style="text-align:center;font-size:15px;color:var(--muted)">
+    อนาคตของชาติ ไม่ได้ถูกกำหนดโดยนักการเมืองเพียงไม่กี่คน<br>
+    แต่ถูกกำหนดจากคนไทยทุกคน ในทุกบ้าน ทุกครอบครัว<br>
+    และทุกการตัดสินใจของเราในวันนี้
+  </p>
+
+  <div class="tag-row">
+    <span class="tag">บทความความคิด</span>
+    <span class="tag">อนาคตชาติ</span>
+    <span class="tag">ความสามัคคี</span>
+    <span class="tag">วินัย</span>
+    <span class="tag">ลูกหลานไทย</span>
+  </div>
+
+  <div class="article-footer">
+    <div class="author-info">
+      <h4>ปรีชา ศรีประดู่</h4>
+      <p>ผู้ประกอบการ · Win Win Pool · นครพนม</p>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-btn">← กลับหน้าหลัก</a>
+
+</div>
+
+</body>
+</html>
