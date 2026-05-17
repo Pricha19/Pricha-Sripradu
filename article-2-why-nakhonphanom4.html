@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ทำไมต้องนครพนม เขต 4 | ปรีชา ศรีประดู่</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0d1b35;
+  --navy2: #132244;
+  --gold: #c8922a;
+  --gold2: #e8b84b;
+  --white: #f4f6fa;
+  --text: #c8d4e8;
+  --muted: #6a7d99;
+  --border: rgba(200,146,42,0.2);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--text);font-family:'Sarabun',sans-serif;font-weight:300;line-height:1.9;overflow-x:hidden}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;height:60px;
+  background:rgba(13,27,53,0.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{font-size:15px;font-weight:500;color:var(--white);text-decoration:none}
+.nav-logo span{color:var(--gold)}
+.nav-back{font-size:13px;color:var(--muted);text-decoration:none}
+.nav-back:hover{color:var(--gold)}
+
+.hero{max-width:780px;margin:0 auto;padding:120px 24px 60px}
+.article-cat{
+  font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;
+  margin-bottom:16px;display:flex;align-items:center;gap:8px;
+}
+.article-cat::before{content:'';width:32px;height:1px;background:var(--gold)}
+.article-title{
+  font-size:clamp(26px,4vw,40px);font-weight:600;color:var(--white);
+  line-height:1.35;margin-bottom:20px;
+}
+.article-meta{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  font-size:13px;color:var(--muted);
+  padding:16px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  margin-bottom:48px;
+}
+.meta-dot{color:var(--border)}
+
+.body{max-width:780px;margin:0 auto;padding:0 24px 80px}
+.body p{font-size:17px;color:var(--text);line-height:2.1;margin-bottom:26px}
+.body p strong{color:var(--white);font-weight:500}
+
+.pull-quote{
+  border-left:3px solid var(--gold);padding:20px 28px;
+  margin:36px 0;background:rgba(200,146,42,0.07);border-radius:0 10px 10px 0;
+}
+.pull-quote p{font-size:19px;font-style:italic;color:var(--gold2);line-height:1.8;margin:0}
+
+.chapter{
+  font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;
+  margin:48px 0 16px;display:flex;align-items:center;gap:12px;
+}
+.chapter::after{content:'';flex:1;height:1px;background:var(--border)}
+
+.highlight-box{
+  background:var(--navy2);border:1px solid var(--border);
+  border-radius:12px;padding:28px 32px;margin:32px 0;
+}
+.highlight-box-title{
+  font-size:13px;letter-spacing:2px;color:var(--gold);
+  text-transform:uppercase;margin-bottom:16px;
+}
+.value-list{list-style:none}
+.value-list li{
+  font-size:15px;color:var(--text);padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  display:flex;align-items:flex-start;gap:12px;line-height:1.7;
+}
+.value-list li:last-child{border-bottom:none}
+.value-list li::before{content:'✦';color:var(--gold);font-size:10px;flex-shrink:0;margin-top:6px}
+
+.vision-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:32px 0}
+.vision-card{
+  background:var(--navy2);border:1px solid var(--border);
+  border-radius:10px;padding:20px;
+}
+.vision-icon{font-size:24px;margin-bottom:10px}
+.vision-title{font-size:14px;font-weight:600;color:var(--white);margin-bottom:6px}
+.vision-desc{font-size:13px;color:var(--muted);line-height:1.7}
+
+.closing{
+  text-align:center;
+  background:linear-gradient(135deg,var(--navy2),rgba(26,74,138,0.3));
+  border:1px solid rgba(200,146,42,0.35);border-radius:16px;
+  padding:44px 32px;margin:44px 0;
+}
+.closing .flag{font-size:28px;margin-bottom:16px}
+.closing p{font-size:17px;color:var(--white);font-weight:500;line-height:2;margin:0}
+
+.section-break{text-align:center;margin:36px 0;font-size:18px;color:var(--border);letter-spacing:8px}
+
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.tag{font-size:11px;letter-spacing:1px;padding:4px 12px;border-radius:20px;border:1px solid var(--border);color:var(--muted)}
+
+.article-footer{border-top:1px solid var(--border);padding-top:28px;margin-top:44px}
+.author-info h4{font-size:15px;font-weight:500;color:var(--white)}
+.author-info p{font-size:13px;color:var(--muted);margin-top:2px}
+
+.back-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--gold);text-decoration:none;margin-top:28px}
+.back-btn:hover{color:var(--gold2)}
+
+@media(max-width:600px){
+  nav{padding:0 16px}
+  .hero,.body{padding-left:16px;padding-right:16px}
+  .vision-grid{grid-template-columns:1fr}
+  .closing{padding:28px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">PRICHA <span>SRIPRADU</span></a>
+  <a href="index.html#articles" class="nav-back">← กลับหน้าหลัก</a>
+</nav>
+
+<div class="hero">
+  <div class="article-cat">วิสัยทัศน์การเมือง</div>
+  <h1 class="article-title">ทำไมต้องนครพนม เขต 4<br>คำตอบที่ผมปักหมายในชีวิต</h1>
+  <div class="article-meta">
+    <span>✍️ ปรีชา ศรีประดู่</span>
+    <span class="meta-dot">·</span>
+    <span>17 พฤษภาคม 2568</span>
+    <span class="meta-dot">·</span>
+    <span>อ่าน 8 นาที</span>
+  </div>
+</div>
+
+<div class="body">
+
+  <p>
+    มีคนถามผมบ่อยครั้งว่า <strong>"ทำไมต้องนครพนม เขต 4?"</strong><br>
+    ในเมื่อธุรกิจอยู่กรุงเทพ ชีวิตมีความสะดวกสบายแล้ว
+    ทำไมต้องเดินเข้าสู่เส้นทางที่ยากและขรุขระเช่นนี้
+  </p>
+
+  <p>
+    คำตอบของผม ไม่ได้เกิดขึ้นในวันเดียว
+    แต่มันถูกสั่งสมมาตลอดทั้งชีวิต
+    ตั้งแต่วันที่ผมยังเป็นเด็กคนหนึ่งในจังหวัดร้อยเอ็ด
+  </p>
+
+  <div class="chapter">บทที่ 1 — จุดเริ่มต้นของความฝัน</div>
+
+  <p>
+    ผมจำได้ว่าตั้งแต่อายุเพียง <strong>6-7 ขวบ</strong>
+    ผมชอบฟังนักการเมืองพูดในโทรทัศน์
+    ไม่ว่าจะเป็นฝ่ายค้านหรือรัฐบาล
+    มีบางอย่างในหัวใจที่ถูกจุดขึ้นทุกครั้ง
+    เมื่อเห็นผู้แทนราษฎรลุกขึ้นพูดแทนประชาชนในสภา
+  </p>
+
+  <p>
+    เด็กชายคนนั้นไม่รู้ว่านั่นคืออะไร
+    แต่รู้ว่า <strong>"วันหนึ่งผมอยากทำแบบนั้นบ้าง"</strong>
+  </p>
+
+  <div class="pull-quote">
+    <p>"ความฝันที่จะเป็นผู้นำ ไม่ได้เกิดจากความอยากมีอำนาจ แต่เกิดจากการเห็นความทุกข์ยากของผู้คนรอบข้าง และอยากเป็นส่วนหนึ่งของการเปลี่ยนแปลง"</p>
+  </div>
+
+  <div class="chapter">บทที่ 2 — จากค่ายเยาวชน สู่หัวใจที่อยากรับใช้</div>
+
+  <p>
+    สมัยเรียนมัธยม ผมได้ออกค่ายเยาวชนอีสาน ครอบคลุมถึง <strong>19 จังหวัด</strong>
+    ได้เห็นความแตกต่างของชีวิตคนในเมืองและในชนบท
+    ได้สัมผัสกับความยากลำบากที่ซ่อนอยู่หลังทุ่งนาสีเขียว
+  </p>
+
+  <p>
+    และเมื่อก้าวเข้าสู่รั้วมหาวิทยาลัย
+    ผมไม่ได้เพียงแค่เรียนหนังสือ
+    แต่รับหน้าที่เป็น <strong>ประธานค่ายอาสาพัฒนาชนบท</strong>
+    ออกค่ายสร้างโรงเรียน ห้องน้ำ สนามกีฬา และอาคารเรียน
+    ในหมู่บ้านที่ห่างไกลความเจริญทั่วภาคอีสาน
+    รวมกว่า <strong>3 ค่ายในฐานะประธาน และมากกว่า 5 ครั้งในฐานะผู้ร่วมออกค่าย</strong>
+  </p>
+
+  <p>
+    ทุกครั้งที่เดินเข้าหมู่บ้าน
+    ผมเห็นภาพเดิมซ้ำๆ
+    ผู้เฒ่าผู้แก่นั่งเฝ้าหลาน
+    พ่อแม่อยู่กรุงเทพ ส่งเงินกลับบ้านทุกเดือน
+    แต่ไม่มีวันที่จะได้กลับมาอยู่บ้านถาวร
+  </p>
+
+  <div class="highlight-box">
+    <div class="highlight-box-title">ปัญหาที่ผมเห็นมาตลอด 20 ปี</div>
+    <ul class="value-list">
+      <li>คนอีสานทำงานหนักทำไร่ทำนา แต่ยังยากจน ขาดแคลนรายได้ที่มั่นคง</li>
+      <li>ลูกหลานต้องจากบ้านเข้ากรุงเทพรับจ้าง ทิ้งพ่อแม่และผู้สูงอายุไว้ในชนบท</li>
+      <li>เด็กขาดการดูแลใกล้ชิดจากพ่อแม่ เสี่ยงต่อปัญหายาเสพติดที่ยังแก้ไม่ได้</li>
+      <li>แหล่งรายได้ในชุมชนมีน้อย ขาดการส่งเสริมการแปรรูปสินค้าเกษตรเพื่อเพิ่มมูลค่า</li>
+      <li>ทรัพยากรอีสานอุดมสมบูรณ์ แต่ยังไม่ได้รับการพัฒนาอย่างเต็มศักยภาพ</li>
+    </ul>
+  </div>
+
+  <div class="chapter">บทที่ 3 — นครพนม ดินแดนที่ผมเรียกว่าบ้าน</div>
+
+  <p>
+    ผมเกิดที่ร้อยเอ็ด แต่เมื่อแต่งงานและย้ายมาอยู่ที่นครพนม
+    ผมใช้ชีวิตที่นี่มาแล้วกว่า <strong>20 ปี</strong>
+    นครพนมจึงไม่ใช่แค่จังหวัดที่ทำงาน
+    แต่คือ <strong>บ้านที่แท้จริงของผมและครอบครัว</strong>
+  </p>
+
+  <p>
+    และสิ่งที่ทำให้ผมเข้าใจนครพนมลึกซึ้งยิ่งขึ้น
+    คือการได้เดินตามรอยของ
+    <strong>ท่านชูกัน กุลวงษา</strong>
+    อดีต สส. นครพนม เขต 4
+    ผู้ซึ่งเป็นทั้งพ่อตาและแบบอย่างในชีวิตของผม
+  </p>
+
+  <div class="pull-quote">
+    <p>"ผมเคยอยู่ร้อยเอ็ด ไม่เคยเห็นหน้า สส. ลงพื้นที่เลยสักครั้ง แต่พอมาอยู่นครพนม ผมเห็นพ่อออกพบพี่น้องไม่ต่ำกว่าวันละ 20 งาน ไม่เว้นแม้แต่วันเดียว พ่อทำได้อย่างไร และทำไมพ่อถึงทำ — นั่นคือคำถามที่เปลี่ยนชีวิตผม"</p>
+  </div>
+
+  <p>
+    ผมจึงเริ่มเดินตามทางของพ่อมาหลายปีแล้ว
+    แม้จะยังต้องอยู่กรุงเทพเพื่อดูแลธุรกิจ
+    แต่ทุกโอกาสที่มี ผมจะลงพื้นที่นครพนม
+    เพื่อเรียนรู้งานมวลชน ฟังปัญหาพี่น้อง
+    และเก็บสั่งสมประสบการณ์ที่ไม่มีในตำราเรียน
+  </p>
+
+  <div class="chapter">บทที่ 4 — วิสัยทัศน์ที่ผมอยากทำเพื่อนครพนม</div>
+
+  <p>
+    ผมไม่ได้เข้ามาในเส้นทางนี้มือเปล่า
+    ผมนำความรู้ทางด้านวิศวกรรม การบริหารธุรกิจ
+    และเทคโนโลยี AI มาเพื่อเชื่อมต่อ
+    <strong>ภาครัฐ ภาคเอกชน และประชาชน</strong>
+    ให้เกิดการสร้างงานและรายได้ที่ยั่งยืน
+  </p>
+
+  <div class="vision-grid">
+    <div class="vision-card">
+      <div class="vision-icon">🌾</div>
+      <div class="vision-title">ยกระดับสินค้าเกษตร</div>
+      <div class="vision-desc">ส่งเสริมการแปรรูปสินค้าเกษตรให้มีคุณภาพ เพิ่มมูลค่า สร้างรายได้ให้เกษตรกรในท้องถิ่น ในยุคที่ไทยคือแหล่งอาหารของโลก</div>
+    </div>
+    <div class="vision-card">
+      <div class="vision-icon">👨‍👩‍👧‍�</div>
+      <div class="vision-title">คืนครอบครัวสู่ชนบท</div>
+      <div class="vision-desc">สร้างงานในท้องถิ่นให้เพียงพอ ลูกหลานจะได้อยู่กับพ่อแม่ ห่างไกลยาเสพติด และดูแลผู้สูงอายุได้</div>
+    </div>
+    <div class="vision-card">
+      <div class="vision-icon">🤖</div>
+      <div class="vision-title">นำ AI พัฒนาชุมชน</div>
+      <div class="vision-desc">ใช้เทคโนโลยีและ AI เชื่อมต่อโอกาสระหว่างรัฐ เอกชน และชุมชน สร้างรายได้ที่ยั่งยืนในยุคดิจิทัล</div>
+    </div>
+    <div class="vision-card">
+      <div class="vision-icon">🛡️</div>
+      <div class="vision-title">แก้ปัญหายาเสพติด</div>
+      <div class="vision-desc">สร้างงาน สร้างรายได้ และดึงเยาวชนกลับสู่ครอบครัวและชุมชน คือการแก้รากเหง้าของปัญหายาเสพติดอย่างแท้จริง</div>
+    </div>
+  </div>
+
+  <div class="section-break">· · ·</div>
+
+  <p>
+    ผมฝันถึงนครพนมที่พี่น้องชาวอีสาน
+    <strong>"ในน้ำมีปลา ในนามีข้าว และในกระเป๋ามีเงิน"</strong>
+    อยู่ได้อย่างมีศักดิ์ศรี โดยไม่ต้องพึ่งพานักการเมือง
+    เพียงแค่ตอนมาหาเสียง
+  </p>
+
+  <p>
+    ผมอยากเห็นวัฒนธรรมประเพณีอันงดงามของนครพนม
+    กลับมาเบ่งบานในสังคมที่เข้มแข็ง
+    ที่ลูกหลานได้เติบโตอยู่กับพ่อแม่
+    ที่ผู้เฒ่าผู้แก่มีคนดูแล
+    และที่ชุมชนยืนด้วยลำแข้งของตัวเอง
+  </p>
+
+  <div class="closing">
+    <div class="flag">🇹🇭</div>
+    <p>
+      "นครพนม เขต 4 ไม่ใช่แค่เขตเลือกตั้ง<br>
+      มันคือบ้านของผม คือพันธกิจของผม<br>
+      และคือคำตอบที่ผมปักหมายในชีวิต<br><br>
+      ผมจะทำหน้าที่แทนพี่น้องประชาชน<br>
+      ด้วยความรู้ ความตั้งใจ และหัวใจที่รักบ้านเกิดเมืองนอน<br>
+      สืบทอดเจตนารมณ์ของ<br>
+      ท่านชูกัน กุลวงษา อดีต สส. ผู้เป็นแบบอย่างของผม"
+    </p>
+  </div>
+
+  <div class="tag-row">
+    <span class="tag">วิสัยทัศน์การเมือง</span>
+    <span class="tag">นครพนม เขต 4</span>
+    <span class="tag">อีสานพัฒนา</span>
+    <span class="tag">สร้างงานชนบท</span>
+    <span class="tag">ครอบครัวอบอุ่น</span>
+  </div>
+
+  <div class="article-footer">
+    <div class="author-info">
+      <h4>ปรีชา ศรีประดู่</h4>
+      <p>ผู้ประกอบการ · Win Win Pool · นครพนม · ผู้สมัคร สส. นครพนม เขต 4</p>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-btn">← กลับหน้าหลัก</a>
+
+</div>
+</body>
+</html>
