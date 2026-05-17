@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ในน้ำมีปลา ในนามีข้าว ในกระเป๋าต้องมีเงิน | ปรีชา ศรีประดู่</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d1b35;--navy2:#132244;
+  --gold:#c8922a;--gold2:#e8b84b;
+  --white:#f4f6fa;--text:#c8d4e8;
+  --muted:#6a7d99;--border:rgba(200,146,42,0.2);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--text);font-family:'Sarabun',sans-serif;font-weight:300;line-height:1.9;overflow-x:hidden}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;height:60px;
+  background:rgba(13,27,53,0.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{font-size:15px;font-weight:500;color:var(--white);text-decoration:none}
+.nav-logo span{color:var(--gold)}
+.nav-back{font-size:13px;color:var(--muted);text-decoration:none}
+.nav-back:hover{color:var(--gold)}
+
+.hero{max-width:780px;margin:0 auto;padding:120px 24px 60px}
+.article-cat{
+  font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;
+  margin-bottom:16px;display:flex;align-items:center;gap:8px;
+}
+.article-cat::before{content:'';width:32px;height:1px;background:var(--gold)}
+.article-title{
+  font-size:clamp(26px,4vw,42px);font-weight:600;color:var(--white);
+  line-height:1.3;margin-bottom:20px;
+}
+.article-meta{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  font-size:13px;color:var(--muted);
+  padding:16px 0;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  margin-bottom:52px;
+}
+.meta-dot{color:var(--border)}
+
+.body{max-width:780px;margin:0 auto;padding:0 24px 80px}
+.body p{font-size:17px;color:var(--text);line-height:2.1;margin-bottom:28px}
+.body p strong{color:var(--white);font-weight:500}
+
+.opening{
+  border-left:3px solid var(--gold);
+  padding:24px 28px;margin-bottom:44px;
+  background:rgba(200,146,42,0.06);
+  border-radius:0 10px 10px 0;
+  font-size:17px;line-height:2.4;color:var(--text);
+}
+
+.pull-quote{
+  border-left:3px solid var(--gold);
+  padding:20px 28px;margin:36px 0;
+  background:rgba(200,146,42,0.07);
+  border-radius:0 10px 10px 0;
+}
+.pull-quote p{font-size:20px;font-style:italic;color:var(--gold2);line-height:1.8;margin:0}
+
+.chapter{
+  font-size:11px;letter-spacing:3px;color:var(--gold);
+  text-transform:uppercase;margin:48px 0 20px;
+  display:flex;align-items:center;gap:12px;
+}
+.chapter::after{content:'';flex:1;height:1px;background:var(--border)}
+
+.belief-list{margin:28px 0;display:flex;flex-direction:column;gap:14px}
+.belief-item{
+  background:var(--navy2);border:1px solid var(--border);
+  border-radius:10px;padding:18px 22px;
+  display:flex;gap:14px;align-items:flex-start;
+}
+.belief-icon{font-size:22px;flex-shrink:0;margin-top:2px}
+.belief-text{font-size:15px;color:var(--text);line-height:1.8}
+.belief-text strong{color:var(--white);font-weight:500}
+
+.dream-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:14px;margin:28px 0;
+}
+.dream-card{
+  background:var(--navy2);border:1px solid var(--border);
+  border-radius:10px;padding:18px 20px;
+}
+.dream-icon{font-size:22px;margin-bottom:8px}
+.dream-text{font-size:14px;color:var(--text);line-height:1.7}
+.dream-text strong{color:var(--white);font-weight:500;display:block;margin-bottom:4px}
+
+.big-statement{
+  text-align:center;
+  padding:40px 24px;margin:40px 0;
+  background:linear-gradient(135deg,var(--navy2),rgba(26,74,138,0.25));
+  border:1px solid rgba(200,146,42,0.3);
+  border-radius:14px;
+}
+.big-statement p{
+  font-size:clamp(18px,2.5vw,24px);
+  font-weight:600;color:var(--white);
+  line-height:1.9;margin:0;
+}
+.big-statement p span{color:var(--gold2)}
+
+.closing{
+  text-align:center;
+  background:linear-gradient(135deg,var(--navy2),rgba(26,74,138,0.3));
+  border:1px solid rgba(200,146,42,0.4);
+  border-radius:16px;padding:44px 32px;margin:44px 0;
+}
+.closing .flag{font-size:28px;margin-bottom:16px}
+.closing p{font-size:17px;color:var(--white);font-weight:500;line-height:2.2;margin:0}
+.closing p span{color:var(--gold2)}
+
+.section-break{text-align:center;margin:36px 0;font-size:18px;color:var(--border);letter-spacing:8px}
+
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.tag{font-size:11px;letter-spacing:1px;padding:4px 12px;border-radius:20px;border:1px solid var(--border);color:var(--muted)}
+
+.article-footer{border-top:1px solid var(--border);padding-top:28px;margin-top:44px}
+.author-info h4{font-size:15px;font-weight:500;color:var(--white)}
+.author-info p{font-size:13px;color:var(--muted);margin-top:2px}
+
+.back-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--gold);text-decoration:none;margin-top:28px}
+.back-btn:hover{color:var(--gold2)}
+
+@media(max-width:600px){
+  nav{padding:0 16px}
+  .hero,.body{padding-left:16px;padding-right:16px}
+  .dream-grid{grid-template-columns:1fr}
+  .closing{padding:28px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">PRICHA <span>SRIPRADU</span></a>
+  <a href="index.html#articles" class="nav-back">← กลับหน้าหลัก</a>
+</nav>
+
+<div class="hero">
+  <div class="article-cat">วิสัยทัศน์การเมือง</div>
+  <h1 class="article-title">ในน้ำมีปลา ในนามีข้าว<br>ในกระเป๋าต้องมีเงิน</h1>
+  <div class="article-meta">
+    <span>✍️ ปรีชา ศรีประดู่</span>
+    <span class="meta-dot">·</span>
+    <span>17 พฤษภาคม 2568</span>
+    <span class="meta-dot">·</span>
+    <span>อ่าน 6 นาที</span>
+  </div>
+</div>
+
+<div class="body">
+
+  <div class="opening">
+    ผมไม่ได้เกิดมาในครอบครัวที่ร่ำรวย<br>
+    ไม่ได้เติบโตมาบนความสะดวกสบาย<br>
+    ผมเป็นเพียงเด็กต่างจังหวัดคนหนึ่ง<br>
+    ที่เคยเห็นพ่อแม่ทำงานหนัก<br>
+    เคยเห็นชาวบ้านออกหาปลา<br>
+    เคยเห็นคนอีสานต้องดิ้นรนเพื่ออนาคตของครอบครัว
+  </div>
+
+  <p>
+    ชีวิตสอนผมว่า <strong>"คนตัวเล็ก"</strong>
+    ไม่ได้ต้องการคำพูดสวยหรู
+    แต่ต้องการ <strong>โอกาส</strong>
+    ต้องการ <strong>รายได้</strong>
+    ต้องการ <strong>อนาคตที่ดีกว่าสำหรับลูกหลาน</strong>
+  </p>
+
+  <div class="pull-quote">
+    <p>"ผมเชื่อในพลังของความหวัง เหมือนที่ผู้นำระดับโลกหลายคนเคยทำให้ประชาชนเชื่อว่า อนาคตที่ดีกว่า…เป็นไปได้จริง"</p>
+  </div>
+
+  <div class="chapter">สิ่งที่ผมเชื่อมาตลอด</div>
+
+  <div class="belief-list">
+    <div class="belief-item">
+      <div class="belief-icon">🌱</div>
+      <div class="belief-text">
+        <strong>เด็กอีสานไม่ได้ด้อยกว่าใคร</strong>
+        พวกเขาแค่ขาดโอกาส ถ้ามีโอกาสที่เท่าเทียม เด็กอีสานสามารถแข่งขันกับโลกได้ทุกเวที
+      </div>
+    </div>
+    <div class="belief-item">
+      <div class="belief-icon">🌾</div>
+      <div class="belief-text">
+        <strong>เกษตรกรไม่ควรจน</strong>
+        ทั้งที่เป็นคนเลี้ยงคนทั้งประเทศ ปัญหานี้ต้องแก้ด้วยการเพิ่มมูลค่าสินค้าเกษตร ไม่ใช่แค่รอน้ำฟ้าและราคาตลาด
+      </div>
+    </div>
+    <div class="belief-item">
+      <div class="belief-icon">🌊</div>
+      <div class="belief-text">
+        <strong>แม่น้ำโขงไม่ควรเป็นเพียงแม่น้ำที่เรามองดู</strong>
+        มันต้องเป็นแม่น้ำแห่งเศรษฐกิจ แห่งการท่องเที่ยว และแห่งโอกาสของลูกหลานนครพนม
+      </div>
+    </div>
+    <div class="belief-item">
+      <div class="belief-icon">💼</div>
+      <div class="belief-text">
+        <strong>การสร้างงานสำคัญกว่าการสร้างคำพูด</strong>
+        ในฐานะนักธุรกิจที่เริ่มจากศูนย์ ผมรู้ดีว่าโอกาสเดียวสามารถเปลี่ยนชีวิตคนได้
+      </div>
+    </div>
+  </div>
+
+  <div class="chapter">บทเรียนจากชีวิตที่ล้มแล้วลุก</div>
+
+  <p>
+    ผมเคยเริ่มจากศูนย์ เคยล้ม เคยเป็นหนี้
+    เคยเหนื่อยจนไม่มีใครเห็น
+    แต่ผมไม่เคยหยุดเชื่อว่า
+    <strong>ถ้าคนเรามีโอกาส ชีวิตสามารถเปลี่ยนได้</strong>
+  </p>
+
+  <p>
+    วันนี้ประเทศไทยเปลี่ยนเร็วมาก โลกเปลี่ยนเร็วมาก
+    ลูกหลานของเราต้องมีทั้งภาษาอังกฤษ เทคโนโลยี AI วิทยาศาสตร์
+    และความคิดสร้างสรรค์ เพื่อแข่งขันกับโลกอนาคต
+  </p>
+
+  <p>
+    แต่ในขณะเดียวกัน
+    <strong>เราต้องไม่ทิ้ง "หัวใจของความเป็นอีสาน"</strong>
+    เราต้องไม่ปล่อยให้พ่อแม่อยู่บ้านลำพัง
+    เพราะลูกหลานไม่มีงานทำในบ้านเกิด
+  </p>
+
+  <div class="big-statement">
+    <p>
+      ผมไม่ได้อยากเห็นนครพนม<br>
+      เป็นเมืองที่<span>ตึกสูงที่สุด</span><br>
+      แต่ผมอยากเห็นประชาชน<br>
+      <span>"มีความสุขที่สุด"</span>
+    </p>
+  </div>
+
+  <div class="chapter">สิ่งที่ผมอยากเห็นในนครพนม</div>
+
+  <div class="dream-grid">
+    <div class="dream-card">
+      <div class="dream-icon">👨‍👩‍👧‍👦</div>
+      <div class="dream-text">
+        <strong>ลูกหลานมีงานทำใกล้บ้าน</strong>
+        ไม่ต้องจากครอบครัวมาหารายได้ในเมืองใหญ่
+      </div>
+    </div>
+    <div class="dream-card">
+      <div class="dream-icon">🌾</div>
+      <div class="dream-text">
+        <strong>เกษตรกรขายผลผลิตได้ราคา</strong>
+        ด้วยการแปรรูปและเพิ่มมูลค่าสินค้าอย่างเป็นระบบ
+      </div>
+    </div>
+    <div class="dream-card">
+      <div class="dream-icon">👴👵</div>
+      <div class="dream-text">
+        <strong>ผู้สูงอายุมีคุณภาพชีวิตที่ดี</strong>
+        มีลูกหลานดูแล ไม่ต้องอยู่อย่างโดดเดี่ยว
+      </div>
+    </div>
+    <div class="dream-card">
+      <div class="dream-icon">📚</div>
+      <div class="dream-text">
+        <strong>เด็กต่างจังหวัดเข้าถึงการศึกษาที่ดี</strong>
+        มีโอกาสเท่าเทียมกับเด็กในเมือง
+      </div>
+    </div>
+    <div class="dream-card">
+      <div class="dream-icon">🚀</div>
+      <div class="dream-text">
+        <strong>คนรุ่นใหม่กล้ากลับมาสร้างธุรกิจ</strong>
+        ที่บ้านเกิด เพราะมีโอกาสและระบบรองรับ
+      </div>
+    </div>
+    <div class="dream-card">
+      <div class="dream-icon">🌊</div>
+      <div class="dream-text">
+        <strong>แม่น้ำโขงเป็นแหล่งท่องเที่ยวและเศรษฐกิจ</strong>
+        สร้างรายได้ให้ชุมชนริมโขงอย่างยั่งยืน
+      </div>
+    </div>
+  </div>
+
+  <div class="section-break">· · ·</div>
+
+  <p>
+    ผมเชื่อว่า <strong>การเมืองที่ดีที่สุด</strong>
+    ไม่ใช่การเมืองแห่งความเกลียดชัง
+    แต่คือการเมืองแห่ง <strong>"การสร้างโอกาส"</strong>
+  </p>
+
+  <p>
+    ผมไม่ได้อยากเป็นนักการเมืองเพื่ออำนาจ
+    แต่ผมอยากใช้ประสบการณ์ชีวิต ใช้ความผิดพลาด
+    ใช้บทเรียนจากการทำธุรกิจ
+    และใช้ <strong>หัวใจของคนอีสานคนหนึ่ง</strong>
+    เพื่อสร้างอนาคตใหม่ให้บ้านของเรา
+  </p>
+
+  <div class="closing">
+    <div class="flag">🌾🐟💰</div>
+    <p>
+      <span>"ในน้ำมีปลา ในนามีข้าว</span><br>
+      และในกระเป๋าต้องมีเงิน<br><br>
+      ลูกหลานไม่จำเป็นต้องจากบ้านอีกต่อไป<br>
+      เพราะบ้านของเรามีงาน มีรายได้ มีอนาคต<br><br>
+      นั่นคืออนาคตที่ผมฝัน<br>
+      และนั่นคือเหตุผลที่ผมยืนอยู่ที่นี่"
+    </p>
+  </div>
+
+  <div class="tag-row">
+    <span class="tag">วิสัยทัศน์การเมือง</span>
+    <span class="tag">อีสานพัฒนา</span>
+    <span class="tag">นครพนม</span>
+    <span class="tag">สร้างโอกาส</span>
+    <span class="tag">คนตัวเล็ก</span>
+    <span class="tag">แม่น้ำโขง</span>
+  </div>
+
+  <div class="article-footer">
+    <div class="author-info">
+      <h4>ปรีชา ศรีประดู่</h4>
+      <p>ผู้ประกอบการ · Win Win Pool · นครพนม · ว่าที่ผู้สมัคร สส. นครพนม เขต 4 ในอนาคต</p>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-btn">← กลับหน้าหลัก</a>
+
+</div>
+</body>
+</html>
